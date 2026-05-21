@@ -1,12 +1,33 @@
-# Academic Research Skills for Claude Code
+# Academic Research Skills for Claude Code / Hermes Agent
 
-[![Version](https://img.shields.io/badge/version-v3.9.4.2-blue)](https://github.com/Imbad0202/academic-research-skills/releases/tag/v3.9.4.2)
+[![Version](https://img.shields.io/badge/version-v3.9.4.2-h1-blue)](https://github.com/Imbad0202/academic-research-skills/releases/tag/v3.9.4.2)
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/license-CC%20BY--NC%204.0-lightgrey)](https://creativecommons.org/licenses/by-nc/4.0/)
-[![Sponsor](https://img.shields.io/badge/sponsor-Buy%20Me%20a%20Coffee-orange?logo=buy-me-a-coffee)](https://buymeacoffee.com/crucify020v)
 
-[简体中文版](README.zh-CN.md) | [繁體中文版](README.zh-TW.md) | [日本語版](README.ja-JP.md)
+[简体中文版](README.zh-CN.md) | [Hermes 适配说明](HERMES-MAP.md)
 
-A comprehensive suite of Claude Code skills for academic research, covering the full pipeline from research to publication.
+A comprehensive suite of academic research skills, covering the full pipeline from research to publication.
+
+> **本仓库是 [Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) v3.9.4.2 的 Hermes Agent 适配分支。**
+> 原始仓库专为 Claude Code 设计。本分支保留了完整内容，同时将核心 skill 转换为 Hermes Agent 兼容格式。
+> 详见 [HERMES-MAP.md](HERMES-MAP.md) 和 [HERMES-CHANGELOG.md](HERMES-CHANGELOG.md)。
+
+## Hermes 用户快速开始
+
+```bash
+# 1. 克隆本仓库
+git clone https://github.com/MaoYo42/academic-research-skills-hermes.git ~/academic-research-skills-hermes
+
+# 2. 将 skill 链接到 Hermes 目录
+ln -sf ~/academic-research-skills-hermes/hermes-skills/*.md ~/.hermes/skills/
+
+# 3. 在 Hermes 中使用
+# 启动研究： "用 ars-deep-research 帮我研究 XXX"
+# 撰写论文： "用 ars-academic-paper 帮我写论文"
+# 审查论文： "用 ars-academic-paper-reviewer 审查这篇论文"
+# 全流程：   "用 ars-academic-pipeline 做一篇完整论文"
+```
+
+已转换的 Hermes skill 文件在 `hermes-skills/` 目录。完整的 agent 定义、references、templates 保留在原始目录中供查阅。
 
 **Install in 30 seconds** (Claude Code CLI / VS Code / JetBrains, v3.7.0+):
 
