@@ -4,6 +4,34 @@
 
 ---
 
+## v3.9.4.2-h2 (2026-05-21)
+
+### 新增
+
+#### `hermes-skills/ars-pipeline.md` — 管线编排器
+Hermes 原生的全流程学术论文管线 skill，提供三种执行模式：
+- **模式 A: 全流程** — Phase 0→6，从零开始
+- **模式 B: 中间进入** — 根据用户已有材料跳转到对应 phase
+- **模式 C: 单 skill** — 明确指定某个 ARS 模块
+
+集成规范：通过 `delegate_task` 子Agent模式编排多Agent协作（并行/串行/混合）
+
+#### `hermes-skills/` 安装到 Hermes
+所有 5 个 skill 文件（4 ARS + 1 pipeline orchestrator）已通过 symlink 安装到 `~/.hermes/skills/`
+
+#### `setup.sh` — 一键安装脚本
+```bash
+./setup.sh          # symlink 模式（默认，推荐）
+./setup.sh --copy   # 复制模式（脱机用）
+```
+
+### 变更
+
+#### HERMES-MAP.md 更新
+- 新增 `ars-pipeline` 映射条目
+- 补充管线集成架构的 `delegate_task` 编排规范
+- 细化中国论文 skill 在各 phase 的插入点
+
 ## v3.9.4.2-h1 (2026-05-21)
 
 ### Fork 创建
@@ -44,5 +72,5 @@
 
 ### 尚未适配
 - 所有 agent definition markdown 文件（`agents/*.md`）保持原样，作为 reference 使用
-- 管线编排逻辑未改（Hermes 侧需用 `delegate_task` + 已有 skill 实现）
+- 管线编排逻辑已通过 `ars-pipeline` skill 实现（Hermes 侧用 `delegate_task` + 已有 skill）
 - 编辑 `README.md` 添加 Hermes 使用说明
